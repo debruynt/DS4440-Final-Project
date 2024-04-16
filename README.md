@@ -21,12 +21,8 @@ The overarching limitation of the concept erasure method is that it is only as g
 
 3. Would complex concepts benefit from being removed as a list of subconcepts? For example, would "the sport of baseball" benefit from being input for erasure as "baseball, bat, catcher, outfielder, shortstop, etc."
 
-# Figure
+### Figure
 
 ## Experimental Findings
 
 ## Conclusions
-
-
-
-<img src="webhook.png" style="max-width:100%">
