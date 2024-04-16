@@ -3,7 +3,9 @@ Travis DeBruyn and Ryan Chapados
 
 ## Introduction
   The issue of unwanted content is one that has plagued diffusion models since their inception. Recently, there have been a few different approaches to this, including a newer method by Rohit Gandikota, Joanna Materzy´nska, Jaden Fiotto-Kauffman and David Bau in their preprint called [Erasing Concepts from Diffusion Models](https://arxiv.org/pdf/2303.07345.pdf).
+  
   Most methods used to solve the issue of unwanted content -- like undesirable image removal, image cloaking, or model editing -- rely on directly interfering with the model, whether it be through changing the train dataset or editing the output. The new angle that concept erasure provides is one that seeks to employ a model's learning against itself. In concept erasure, a diffusion model has its weights fine-tuned using negative guidance.
+  
   Concept erasure is naturally void of many of the disadvantages that are present in other methods working to achieve a similar goal. The goal of this project is to attempt to uncover disadvantages that remain undiscovered.
 
 ## Review
