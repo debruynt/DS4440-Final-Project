@@ -1,4 +1,4 @@
-### Stress-Testing Stable Diffusion Concept Erasure
+# Stress-Testing Stable Diffusion Concept Erasure
 
 ## Intro
 
