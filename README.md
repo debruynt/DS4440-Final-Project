@@ -1,7 +1,18 @@
 # Stress-Testing Stable Diffusion Concept Erasure
 Travis DeBruyn and Ryan Chapados
 
-## Intro
+## Introduction
+  The issue of unwanted content is one that has plagued diffusion models since their inception. Recently, there have been a few different approaches to this, including a newer method by Rohit Gandikota, Joanna Materzy´nska, Jaden Fiotto-Kauffman and David Bau in their preprint called [Erasing Concepts from Diffusion Models](https://arxiv.org/pdf/2303.07345.pdf) 
+
+## Review
+
+## Methodology
+
+# Figure
+
+## Experimental Findings
+
+## Conclusions
 
 
 
