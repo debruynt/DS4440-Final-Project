@@ -19,7 +19,7 @@ The overarching limitation of the concept erasure method is that it is only as g
 
 2. As noted in the paper, removing different types of concepts poses different challenges. Specifically, removing object classes can cause the concept erasure to fail while only erasing particular attributes of concepts. Is there a common feature in the offending concepts?
 
-3. Would complex concepts benefit from being removed as a list of subconcepts? 
+3. Would complex concepts benefit from being removed as a list of subconcepts? For example, would "the sport of baseball" benefit from being input for erasure as "baseball, bat, catcher, outfielder, shortstop, etc."
 
 # Figure
 
