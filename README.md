@@ -9,14 +9,17 @@ Travis DeBruyn and Ryan Chapados
   Concept erasure is naturally void of many of the disadvantages that are present in other methods working to achieve a similar goal. The goal of this project is to attempt to uncover disadvantages that remain undiscovered.
 
 ## Review
-
-
+...
+The overarching limitation of the concept erasure method is that it is only as good at removing concepts as it is at identifying them. 
+...
 ## Methodology
-1. Engineering prompts to intentionally attack edge cases that simulate a user attempting to "work around" erased concepts. For example, if the concept that has been removed is 'car', what happens when the model is asked to create a pickup truck with no truck bed?
-<img src="![car_erase_replace](https://github.com/debruynt/DS4440-Final-Project/assets/71042338/ba653a68-d6ca-4b77-be5d-809b8a3c365e)" style="max-width:50%">
+###Preliminary Questions
+1. Engineering prompts to intentionally attack edge cases that simulate a user attempting to "work around" erased concepts. For example, if the concept that has been removed is 'car', what happens when the model is asked to create a pickup truck with no truck bed? (Image to be replaced in future)
+<img src="car_erase_replace.png" style="max-width:50%">
 
+2. As noted in the paper, removing different types of concepts poses different challenges. Specifically, removing object classes can cause the concept erasure to fail while only erasing particular attributes of concepts. Is there a common feature in the offending concepts?
 
-2. 
+3. Would complex concepts benefit from being removed as a list of subconcepts? 
 
 # Figure
 
