@@ -13,7 +13,7 @@ Travis DeBruyn and Ryan Chapados
 The overarching limitation of the concept erasure method is that it is only as good at removing concepts as it is at identifying them. 
 ...
 ## Methodology
-###Preliminary Questions
+### Preliminary Questions
 1. Engineering prompts to intentionally attack edge cases that simulate a user attempting to "work around" erased concepts. For example, if the concept that has been removed is 'car', what happens when the model is asked to create a pickup truck with no truck bed? (Image to be replaced in future)
 <img src="car_erase_replace.png" style="max-width:50%">
 
