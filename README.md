@@ -1,4 +1,5 @@
 # Stress-Testing Stable Diffusion Concept Erasure
+Travis DeBruyn and Ryan Chapados
 
 ## Intro
 
