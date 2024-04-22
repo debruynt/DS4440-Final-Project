@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <title>Your Project Name</title>
-<meta property="og:title" content=Your Project Name" />
-<meta name="twitter:title" content="Your Project Name" />
-<meta name="description" content="Your project about your cool topic described right here." />
-<meta property="og:description" content="Your project about your cool topic described right here." />
-<meta name="twitter:description" content="Your project about your cool topic described right here." />
+<meta property="og:title" content="Stress-Testing Stable Diffusion Concept Erasure" />
+<meta name="twitter:title" content="Stress-Testing Stable Diffusion Concept Erasure" />
+<meta name="description" content="Bringing concepts back to an ESD model through adversarial prompt engineering" />
+<meta property="og:description" content="Bringing concepts back to an ESD model through adversarial prompt engineering" />
+<meta name="twitter:description" content="Bringing concepts back to an ESD model through adversarial prompt engineering" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" /> 
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -22,8 +22,8 @@
 <div class="nd-pageheader">
  <div class="container">
  <h1 class="lead">
- <nobr class="widenobr">Your Project Name</nobr>
- <nobr class="widenobr">For CS 7150</nobr>
+ <nobr class="widenobr">Stress-Testing Stable Diffusion Concept Erasure</nobr>
+ <nobr class="widenobr">For DS 4440</nobr>
  </h1>
  </div>
 </div><!-- end nd-pageheader -->
@@ -31,20 +31,25 @@
 <div class="container">
 <div class="row">
 <div class="col justify-content-center text-center">
-<h2>An Analysis of [papername]</h2>
-<p>Describe the paper and the big question about it that interests you.</p>
+<h2>An Analysis of Erasing Concepts from Diffusion Models</h2>
+<p>Can we bring back concepts erased from a diffusion model through prompt engineering, or are they truely gone?</p>
 </div>
 </div>
 <div class="row">
 <div class="col">
 
-<h2>Literature Review; Biography; Social Impact; Industry Applications; Follow-on Research; and Peer-Review</h2>
+<h2>Introduction</h2>
+ <p> The issue of unwanted content is one that has plagued diffusion models since their inception. Recently, there have been a few different approaches to this, including a newer method by Rohit Gandikota, Joanna Materzy´nska, Jaden Fiotto-Kauffman and David Bau in their preprint called <a href="https://arxiv.org/pdf/2303.07345.pdf">Erasing Concepts from Diffusion Models</a>. Most methods used to solve the issue of unwanted content -- like undesirable image removal, image cloaking, or model editing -- rely on directly interfering with the model, whether it be through changing the train dataset or editing the output. The new angle that concept erasure provides is one that seeks to employ a model's learning against itself. In concept erasure, a diffusion model has its weights fine-tuned using negative guidance. Concept erasure is naturally void of many of the disadvantages that are present in other methods working to achieve a similar goal. The goal of this project is to attempt to uncover disadvantages that remain undiscovered. We will be stress testing this method by removing objects and artistic style from the model, then attempting to bring them back through prompt engineering. We hope to prove that the erased concepts are not fully gone from the model, and can be reintroduced through clever prompting. 
+ </p>
 
-<p>Just as we have done in the role-playing exercise, analyze the paper from all perspectives.
-</p>
+ <h2>Review</h2>
+ <p> The training of the Erasing Stable Diffusion, or ESD model includes two diffusion models: One whos parameters θ, are updated during training, and a second whos parameters θ* are frozen. The fine tuning of the model weights occurs during denoising stage of image generation, where the image is only partially denoised. The unfrozen model θ will generate a partially denoised image, conditioned on the given concept to erase c. The frozen model θ* will then predict the noise, continuing the image generation process. The frozen model makes two predictions, once predicting the noise while conditioned by c, the second time predicting without conditioning. The images generated are then fed into the loss function, which tunes θ to reduce the probability that the output image will be classified as c.
+ </p>
 
-<p>Optionally, in addition to a reading-based analysis, implement the ideas of the paper in code, and report on your findings.
-</p>
+ <h2>Methodology</h2>
+  <p> Our methodology will revolve around tweaking an initial prompt to attempt to restore the artistic style or object removed from the model. Our attacks will vary based on removed object or concept. For objects, we will attempt to find work arounds to the term in generation. For example, when the concept of 'car' has been erased from the model, we can attempt to generate it by telling the model to piece together several different concepts it already knows. We might use a prompt such as "Generate a vehicle with four tires driving on a road". This prompt with the combination of tires, driving, and road could cause the model to "remember" the concept of a car, generating it from untouched parts. For artistic style, our approach will be similar. We will specifically describe the image to be generated, and attempt to describe the style to be used. However, as artistic style is inherently less concrete than an object, this method may struggle more with artistic style. 
+  </p>
+
 
 <h3>References</h3>
 
