@@ -19,17 +19,10 @@ h2 {
   background-color: #233BF5;
 }
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
-
-/* Clear floats after image containers */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nd-pageheader a, .nd-pageheader a.likelink {
