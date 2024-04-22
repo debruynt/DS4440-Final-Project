@@ -50,6 +50,26 @@
   <p> Our methodology will revolve around tweaking an initial prompt to attempt to restore the artistic style or object removed from the model. Our attacks will vary based on removed object or concept. For objects, we will attempt to find work arounds to the term in generation. For example, when the concept of 'car' has been erased from the model, we can attempt to generate it by telling the model to piece together several different concepts it already knows. We might use a prompt such as "Generate a vehicle with four tires driving on a road". This prompt with the combination of tires, driving, and road could cause the model to "remember" the concept of a car, generating it from untouched parts. For artistic style, our approach will be similar. We will specifically describe the image to be generated, and attempt to describe the style to be used. However, as artistic style is inherently less concrete than an object, this method may struggle more with artistic style. 
   </p>
 
+<h2>Experimental Findings</h2>
+   <p> 
+The reintroduction of artistic style proved to be significantly more challenging than we anticipated. We began by loading the tuned model weights which removed Van Gogh's artistic style. Then, our approach was to take a base prompt and edit it while testing to effects of each edit. To generate our base prompt, we asked ChatGPT to describe Van Gogh's Starry Night.
+  </p>
+<div class="row">
+  <div class="column">
+    <img src="van_gogh_adv_results/0_0.png" alt="vg_0">
+    Prompt: Vincent van Gogh's "Starry Night." The scene should depict a tranquil night sky filled with swirling, tumultuous clouds illuminated by the bright light of a crescent moon. Below, a sleepy village with quaint houses and steepled churches sits nestled among rolling hills and tall, dark cypress trees. The stars above twinkle with an ethereal glow, and the entire scene is imbued with a sense of enchantment and wonder
+  </div>
+  <div class="column">
+    <img src="van_gogh_adv_results/1_0.png" alt="vg_0">
+   Prompt: image of a serene night sky with swirling clouds, a crescent moon illuminating a sleepy village, and twinkling stars above, Use bold and vibrant colors, Apply expressive and swirling brushstrokes, Depict emotive and perhaps distorted forms, Create a sense of intensity and rawness, Infuse the image with a sense of vitality and movement.
+  </div>
+  <div class="column">
+    <img src="van_gogh_adv_results/2_0.png" alt="vg_0">
+   Prompt: image of a serene night sky with swirling clouds, a crescent moon illuminating a sleepy village, and twinkling stars above, use blues for the sky, yellows for the stars, and grays for the village, Apply expressive and swirling brushstrokes, Depict emotive and distorted forms, Infuse the image with a sense of vitality and movement.
+  </div>
+</div>
+
+ 
 
 <h3>References</h3>
 
