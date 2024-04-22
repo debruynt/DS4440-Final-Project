@@ -136,8 +136,11 @@ The reintroduction of artistic style proved to be significantly more challenging
   With Img 4, we specifically referred to Van Gogh's style. This yielded interesting results, as the composition of the painting was very similar to Starry Night, with the town, swirling clouds, stars and moon. However, the model still fails to capture the essence of Van Gogh. The prompt of Img 5 was focused on recreating the swirls of the original painting, however it was only a partial success. Img 6 is our most successful generation, however it still lacks Van Gogh's signature style of painting. As soon as Van Gogh was brought into the prompt, the normal diffusion model began creating Starry Night even without a direct reference to the painting itself. In the end, we were unable to successfully restore Van Gogh's artistic style. We believe that this is due to the fact that an artistic style is extremely difficult to describe, thus capturing it in a prompt is unfortunately very difficult. 
  </p>
 
+<h2>Conclusion</h2>
 
- 
+ <p>
+  While our stress testing of the erasure of artistic style was unsuccessful, it does leave opportunities for future work. For example, we only tested one artist's style, particularly one who was prominently featured in the ESD paper. We may have been able to obtain better results had we tested on multiple artists. However, our failure to restore the art style has good implications for ESDs future. The utility of ESD erasing an artistic style is preserving the work of artists, and preventing AI from copying an artist who does not wish to be copied. Our testing demonstrates that the artistic style would be very difficult to restore if an attacker did not have access to the model weights, thereby keeping the artist's work safe. Our work goes to show that ESD models are an extremely promising method of removing artistic styles from diffusion models.
+ </p>
 
 <h3>References</h3>
 
