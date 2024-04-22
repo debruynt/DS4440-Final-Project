@@ -1,3 +1,5 @@
+[Website Link (REMOVE ME)](https://expo.baulab.info/2024-Spring/debruynt/)
+
 # Stress-Testing Stable Diffusion Concept Erasure
 Travis DeBruyn and Ryan Chapados
 
