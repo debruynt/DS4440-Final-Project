@@ -51,6 +51,7 @@
   </p>
 
 <h2>Experimental Findings</h2>
+ <h3>Early Findings</h3>
    <p> 
 The reintroduction of artistic style proved to be significantly more challenging than we anticipated. We began by loading the tuned model weights which removed Van Gogh's artistic style. Then, our approach was to take a base prompt and edit it while testing to effects of each edit. To generate our base prompt, we asked ChatGPT to describe Van Gogh's Starry Night. The results below illustrate the difference between the erased stable diffusion model, and the normal stable diffusion model. 
   </p>
@@ -93,7 +94,8 @@ The reintroduction of artistic style proved to be significantly more challenging
  <p>
   Img 1 shows our default prompt, generated straight from ChatGPT. Without any mention of style, this verbose prompt does a very poor job of replicating Van Gogh's iconic style. Img 2 shows some slight improvements, with the prompt being shortened and stylistic suggestions added. However, the signature style of Van Gogh is nowhere to be seen. In image 3, we specifially referred to an impressionist style. While the colors are more similar to Starry Night, the buildings are gone and it still lacks the style of Van Gogh. For the normal generation, while images 2 and 3 are not at all similar to Van Gogh's starry night, the impressionist style and obvious brushstrokes are significantly more apparent than in their ESD counterparts.
  </p>
- 
+
+ <h3>Later Findings</h3>
  <div class="col justify-content-center text-center">
  ESD Model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Normal Stable Diffusion
    </div> 
