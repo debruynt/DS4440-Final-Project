@@ -59,7 +59,7 @@ The reintroduction of artistic style proved to be significantly more challenging
  </div> 
   <p>
    
-    Prompt: Vincent van Gogh's "Starry Night." The scene should depict a tranquil night sky filled with swirling, tumultuous clouds illuminated by the bright light of a crescent moon. Below, a sleepy village with quaint houses and steepled churches sits nestled among rolling hills and tall, dark cypress trees. The stars above twinkle with an ethereal glow, and the entire scene is imbued with a sense of enchantment and wonder
+    Img 1, Prompt: Vincent van Gogh's "Starry Night." The scene should depict a tranquil night sky filled with swirling, tumultuous clouds illuminated by the bright light of a crescent moon. Below, a sleepy village with quaint houses and steepled churches sits nestled among rolling hills and tall, dark cypress trees. The stars above twinkle with an ethereal glow, and the entire scene is imbued with a sense of enchantment and wonder
   </p>
   
 <div class="col justify-content-center text-center">
@@ -67,15 +67,47 @@ The reintroduction of artistic style proved to be significantly more challenging
  </div> 
   <p>
    
-   Prompt: image of a serene night sky with swirling clouds, a crescent moon illuminating a sleepy village, and twinkling stars above, Use bold and vibrant colors, Apply expressive and swirling brushstrokes, Depict emotive and perhaps distorted forms, Create a sense of intensity and rawness, Infuse the image with a sense of vitality and movement.
+   Img 2, Prompt: image of a serene night sky with swirling clouds, a crescent moon illuminating a sleepy village, and twinkling stars above, Use bold and vibrant colors, Apply expressive and swirling brushstrokes, Depict emotive and perhaps distorted forms, Create a sense of intensity and rawness, Infuse the image with a sense of vitality and movement.
   </p>
 
 <div class="col justify-content-center text-center">
-  <img src="van_gogh_adv_results/2_0.png" alt="vg_0" style="width: 30%; height: auto; align-items: center;">
+  <img src="van_gogh_adv_results/3_0.png" alt="vg_0" style="width: 30%; height: auto; align-items: center;">
  </div> 
   <p>
    
-   Prompt: image of a serene night sky with swirling clouds, a crescent moon illuminating a sleepy village, and twinkling stars above, use blues for the sky, yellows for the stars, and grays for the village, Apply expressive and swirling brushstrokes, Depict emotive and distorted forms, Infuse the image with a sense of vitality and movement.
+   Img 3, Prompt: image of a serene night sky with swirling clouds, a crescent moon illuminating a sleepy village, and twinkling stars above, use dark blues for the sky, yellows for the stars, Apply expressive and swirling brushstrokes, Depict distorted forms, use an impressionist style.
+ </p>
+ <br>
+ <p>
+  Img 1 shows our default prompt, generated straight from ChatGPT. Without any mention of style, this verbose prompt does a very poor job of replicating Van Gogh's iconic style. Img 2 shows some slight improvements, with the prompt being shortened and stylistic suggestions added. However, the signature style of Van Gogh is nowhere to be seen. In image 3, we specifially referred to an impressionist style. While the colors are more similar to Starry Night, the buildings are gone and it still lacks the style of Van Gogh. 
+ </p>
+
+ <div class="col justify-content-center text-center">
+  <img src="van_gogh_adv_results/6_0.png" alt="vg_0" style="width: 30%; height: auto;">
+ </div> 
+  <p>
+   
+    Img 4, Prompt: a serene night sky with swirling clouds, a crescent moon illuminating a village, and twinkling stars above, use dark blues for the sky, extremely swirly and detailed brushstrokes, use an impressionist style, extreme detail for the town and sky, style of van gogh
+  </p>
+  
+<div class="col justify-content-center text-center">
+  <img src="van_gogh_adv_results/7_0.png" alt="vg_0" style="width: 30%; height: auto; align-items: center;">
+ </div> 
+  <p>
+   
+   Img 5, Prompt: an impressionist painting of a dark blue night sky with swirling clouds, a crescent moon illuminating a detailed village, and twinkling stars above, extremely swirly and tight brushstrokes, style of van gogh
+  </p>
+
+<div class="col justify-content-center text-center">
+  <img src="van_gogh_adv_results/9_0.png" alt="vg_0" style="width: 30%; height: auto; align-items: center;">
+ </div> 
+  <p>
+   
+   Img 6, Prompt: a serene night sky with swirling clouds, a crescent moon illuminating a village, and twinkling stars above, use dark blues for the sky, use an impressionist painting style, extreme detail for the town and sky, style of van gogh, with random small brushstrokes throughout, extremely swirly and tight brushstrokes
+ </p>
+ <br>
+ <p>
+  With Img 4, we specifically referred to Van Gogh's style. This yielded interesting results, as the composition of the painting was very similar to Starry Night, with the town, swirling clouds, stars and moon. However, the model still fails to capture the essence of Van Gogh. The prompt of Img 5 was focused on recreating the swirls of the original painting, however it was only a partial success. Img 6 is our most successful generation, however it still lacks Van Gogh's signature style of painting. In the end, we were unable to successfully restore Van Gogh's artistic style. We believe that this is due to the fact that an artistic style is extremely difficult to describe, thus capturing it in a prompt is unfortunately very difficult. 
  </p>
 
 
