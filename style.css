@@ -19,11 +19,11 @@ h2 {
   background-color: #233BF5;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+.image-container {
+  display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
 .nd-pageheader a, .nd-pageheader a.likelink {
   color: #e4f1fe;
