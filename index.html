@@ -136,10 +136,40 @@ The reintroduction of artistic style proved to be significantly more challenging
   With Img 4, we specifically referred to Van Gogh's style. This yielded interesting results, as the composition of the painting was very similar to Starry Night, with the town, swirling clouds, stars and moon. However, the model still fails to capture the essence of Van Gogh. The prompt of Img 5 was focused on recreating the swirls of the original painting, however it was only a partial success. Img 6 is our most successful generation, however it still lacks Van Gogh's signature style of painting. As soon as Van Gogh was brought into the prompt, the normal diffusion model began creating Starry Night even without a direct reference to the painting itself. In the end, we were unable to successfully restore Van Gogh's artistic style. We believe that this is due to the fact that an artistic style is extremely difficult to describe, thus capturing it in a prompt is unfortunately very difficult. 
  </p>
 
+ <br>
+ 
+ <h3>Continued Testing</h3>
+
+ <div class="col justify-content-center text-center">
+  ESD Model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Normal Stable Diffusion
+ </div>
+ <div class="col justify-content-center text-center">
+  <img src="car_results/imgs/" alt="vg_0" style="width: 30%; height: auto; align-items: center;">
+  <img src="car_results/imgs/" alt="vg_0" style="width: 30%; height: auto;">
+ </div> 
+ <p>
+  Continuing to test on a different concept yielded insights into what is possible after a concept has been erased. We trained the erasing model ourselves to erase the concept of a 'car' from its images. After, we compared the output of prompts across both Stable Diffusion v1 and the erased model without fine-tuned weights that we trained ourselves. This model struggled much more to remove the concept of cars from its results. Utliziing prompts that asked the model to come up with a vehicle or mode of transport to solve a problem seemed to be the most effective, as can bee seen in Img_____ above.
+ </p>
+
+ <div class="col justify-content-center text-center">
+  ESD Model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Normal Stable Diffusion
+ </div>
+ <div class="col justify-content-center text-center">
+  <img src="car_results/imgs/" alt="vg_0" style="width: 30%; height: auto; align-items: center;">
+  <img src="car_results/imgs/" alt="vg_0" style="width: 30%; height: auto;">
+ </div>
+ <p>
+  In another example, pictured above in Img____, the erased model was asked to "Create a visual representation of a vehicle typically seen in video games and virtual environments". This is likely a coincidental result as the most common vehicles with which people interact in video games are likely cars due to the large cultural interest found in them. In a set of 100 images generated from 100 various prompts, we classified (by hand) that the model generated images where the main focus was cars 38 times, non-car pedestrian vehicles (minivans, large trucks, other utility vehicles) 24 times, construction vehicles once, bikes 9 times, public transport 10 times, and completely unrelated or nonsensical generations 18 times. While cars are the most commonly-returned result, this is likely because they are being specifically targeted in the prompts. When compared to the results from Stable Diffusion producing the same thing, it is obvious that the model has changed the weights in _______. Even with the most common return rate, there were very few cars genereated in images in the erased model that could truly pass for a car. They resemble a car closely enough to invoke the thought that the intended response is a car, but all but two images hold up to scrutiny.
+ </p>
+ 
 <h2>Conclusion</h2>
 
  <p>
   While our stress testing of the erasure of artistic style was unsuccessful, it does leave opportunities for future work. For example, we only tested one artist's style, particularly one who was prominently featured in the ESD paper. We may have been able to obtain better results had we tested on multiple artists. However, our failure to restore the art style has good implications for ESDs future. The utility of ESD erasing an artistic style is preserving the work of artists, and preventing AI from copying an artist who does not wish to be copied. Our testing demonstrates that the artistic style would be very difficult to restore if an attacker did not have access to the model weights, thereby keeping the artist's work safe. Our work goes to show that ESD models are an extremely promising method of removing artistic styles from diffusion models.
+ </p>
+ <br>
+ <p>
+  The stress-testing of the removal of a concept that is much more vague on a set of less refined weights was relatively successful, but the results can only truly be used as fuel for further study of this method. The erasure of the concept of a car produced a far range of outcomes, which is in line with how vague the concept shows itself to be. The concept of specificity in a concept, as well as ambiguity between similar concepts also proved to cause some issues for the model in the original paper. It was difficult for the model to entirely remove a specific artists style without impacting others. This lines up with the results seen in our testing of the car concept. In removing the car, while it was not entirely successful at its main task, the model also struggled in creating concepts that perform a similar purpose to cars (trucks, buses, trains, bikes). This begs the question, what set of ideas defines a car? Should a model that removes cars also remove minivans or buses? It is important to be as specific as possible in specifying what concepts should be erased from the model to lower error in outputs. Overall, the work of Ghandikota et al. provides a great solution to the the problem posed by the prevention of unwanted output.
  </p>
 
 <h3>References</h3>
