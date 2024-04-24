@@ -138,7 +138,7 @@ The reintroduction of artistic style proved to be significantly more challenging
 
  <br>
  
- <h3>Continued Testing</h3>
+ <h3>Replication with Other Concepts</h3>
 
  <div class="col justify-content-center text-center">
   ESD Model&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Normal Stable Diffusion
@@ -146,9 +146,12 @@ The reintroduction of artistic style proved to be significantly more challenging
  <div class="col justify-content-center text-center">
   <img src="car_results/imgs/" alt="vg_0" style="width: 30%; height: auto; align-items: center;">
   <img src="car_results/imgs/" alt="vg_0" style="width: 30%; height: auto;">
- </div> 
+ </div>
+ <p>Img 7 Prompt: Generate an image resembling a mode of transportation with hover technology, featuring magnetic levitation and anti-gravity propulsion</p>
+ <br>
+ 
  <p>
-  Continuing to test on a different concept yielded insights into what is possible after a concept has been erased. We trained the erasing model ourselves to erase the concept of a 'car' from its images. After, we compared the output of prompts across both Stable Diffusion v1 and the erased model without fine-tuned weights that we trained ourselves. This model struggled much more to remove the concept of cars from its results. Utliziing prompts that asked the model to come up with a vehicle or mode of transport to solve a problem seemed to be the most effective, as can bee seen in Img_____ above.
+  Continuing to test on a different concept yielded insights into what is possible after a concept has been erased. We trained the erasing model ourselves to erase the concept of a 'car' from its images. After, we compared the output of prompts across both Stable Diffusion v1 and the erased model without fine-tuned weights that we trained ourselves. This model struggled much more to remove the concept of cars from its results. Utliziing prompts that asked the model to come up with a vehicle or mode of transport to solve a problem seemed to be the most effective, as can bee seen in Img 7 above where the prompt includes technology that currently does not exist.
  </p>
 
  <div class="col justify-content-center text-center">
@@ -158,8 +161,11 @@ The reintroduction of artistic style proved to be significantly more challenging
   <img src="car_results/imgs/" alt="vg_0" style="width: 30%; height: auto; align-items: center;">
   <img src="car_results/imgs/" alt="vg_0" style="width: 30%; height: auto;">
  </div>
+ <p>Img 8 Prompt: Create a visual representation of a vehicle typically seen in video games and virtual environments. </p>
+ <br>
+ 
  <p>
-  In another example, pictured above in Img____, the erased model was asked to "Create a visual representation of a vehicle typically seen in video games and virtual environments". This is likely a coincidental result as the most common vehicles with which people interact in video games are likely cars due to the large cultural interest found in them. In a set of 100 images generated from 100 various prompts, we classified (by hand) that the model generated images where the main focus was cars 38 times, non-car pedestrian vehicles (minivans, large trucks, other utility vehicles) 24 times, construction vehicles once, bikes 9 times, public transport 10 times, and completely unrelated or nonsensical generations 18 times. While cars are the most commonly-returned result, this is likely because they are being specifically targeted in the prompts. When compared to the results from Stable Diffusion producing the same thing, it is obvious that the model has changed the weights in _______. Even with the most common return rate, there were very few cars genereated in images in the erased model that could truly pass for a car. They resemble a car closely enough to invoke the thought that the intended response is a car, but all but two images hold up to scrutiny.
+  Img 8 above is likely a coincidental result as the most common vehicles with which people interact in video games are likely cars. In a set of 100 images generated from 100 various prompts, we classified (by hand) that the model generated images where the main focus was cars 38 times, non-car pedestrian vehicles (minivans, large trucks, other utility vehicles) 24 times, construction vehicles once, bikes 9 times, public transport 10 times, and completely unrelated or nonsensical generations 18 times. While cars are the most commonly-returned result, this is likely because they are being specifically targeted in the prompts. When compared to the results from Stable Diffusion producing the same thing, it is obvious that the model has changed the weights in _______. Even with the most common return rate, there were very few cars genereated in images in the erased model that could truly pass for a car. They resemble a car closely enough to invoke the thought that the intended response is a car, but all but two images hold up to scrutiny.
  </p>
  
 <h2>Conclusion</h2>
