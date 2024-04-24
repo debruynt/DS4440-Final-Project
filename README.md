@@ -1,4 +1,4 @@
-[Website Link (REMOVE ME)](https://expo.baulab.info/2024-Spring/debruynt/)
+[Website Link](https://expo.baulab.info/2024-Spring/debruynt/)
 
 # Stress-Testing Stable Diffusion Concept Erasure
 Travis DeBruyn and Ryan Chapados
@@ -17,8 +17,7 @@ The training of the Erasing Stable Diffusion, or ESD model includes two diffusio
 
 ## Methodology
 ### Preliminary Questions
-1. Engineering prompts to intentionally attack edge cases that simulate a user attempting to "work around" erased concepts. For example, if the concept that has been removed is 'car', what happens when the model is asked to create a pickup truck with no truck bed? (Image to be replaced in future)
-<img src="car_erase_replace.png" style="max-width:50%">
+1. Engineering prompts to intentionally attack edge cases that simulate a user attempting to "work around" erased concepts. For example, if the concept that has been removed is 'car', what happens when the model is asked to create a pickup truck with no truck bed?
 
 2. As noted in the paper, removing different types of concepts poses different challenges. Specifically, removing object classes can cause the concept erasure to fail while only erasing particular attributes of concepts. Is there a common feature in the offending concepts?
 
